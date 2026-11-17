@@ -1015,15 +1015,17 @@ const STOPS = [
   ]
 },
 /* 10 */ {
-  id: "oaia", name: "Oaia Island", short: "Oaia Island", at: [562, 2950], zone: "Scale & rate · the long view",
-  find: "Look out to sea: find the small island offshore, west of the headland.",
-  photos: ["oaia_photo", "sat_wide", "oaia_view"],
-  intro: "Oaia is a remnant of the same volcanic pile, now isolated over a kilometre offshore. It shows how resistant this volcanic rock is, and how long the coast has been eroding around it.",
+  id: "oaia", name: "Scales and rates of change", short: "Scales & rates", at: [2250, 3650], area: [2100, 3540, 2520, 3880], zone: "Clifftop above Maori Bay · the long view",
+  find: "Climb to the clifftop on the south side of Maori Bay, where you can look back over the whole study area.",
+  photos: ["sat_wide", "drone_south", "headland_view", "oaia_view"],
+  intro: "From here you can see the whole system at once: the beach, dunes, platform, stack and cliffs. Every process you have met works at its own spatial scale and its own rate.",
   facts: [
-    "Oaia Island lies about <b>1.1 km west</b> of Otakamiro Point and about <b>1.5 km</b> from Maori Bay (often quoted as 1.4–1.6 km offshore).",
-    "It is about <b>60 × 30 m</b> and about <b>25 m</b> high: an early Miocene <b>pillow-lava</b> remnant of the Waitākere volcano.",
-    "Its Māori name, <b>Motu-ō-Haea</b>, refers to the white guano of its gannet colony.",
-    "Gannets nested on Oaia before 1914, colonised Motutara in the 1970s and the mainland point in <b>1979</b>."
+    "<b>Fastest</b>: a saltation hop takes seconds; waves arrive every few seconds; the tide turns twice a day.",
+    "<b>Event and seasonal</b>: the 2008 storms cut about <b>10 m in 3 months</b>; the beach swings between summer and winter profiles every six months.",
+    "<b>Decadal</b>: the dune front at MUPA retreats about <b>1–1.5 m a year</b>.",
+    "<b>Millennial</b>: the cliff retreats about <b>15 cm per 100 years</b>, about <b>11 m in 7,000 years</b> since sea level stabilised.",
+    "<b>Geological</b>: the breccia formed about <b>19 million years ago</b> and was uplifted <b>2–7 million years ago</b>.",
+    "Offshore, Oaia Island (about <b>1.1 km west</b> of the point) is a remnant of the same volcanic rock."
   ],
   lesson: "scales",
   tasks: [
@@ -1239,7 +1241,7 @@ FINALE.tasks = [FINALE.tasks[1]];
 FINALE.tasks[0].q = "Which annotations would lift a diagram of Motutara Stack above a labelled sketch? Select every one that explains a process or adds a specific figure.";
 const PARTS = [
   { n: 1, t: "Part 1 · The beach and dunes", short: "Beach & dunes", from: 0, to: 4, blurb: "Ōkiritoto Stream to the southern corner: longshore drift, foredune formation, summer and winter profiles, dune retreat and the reversed drift by the point." },
-  { n: 2, t: "Part 2 · The headland and offshore", short: "Headland", from: 5, to: 9, finale: true, blurb: "Fishermans Rock to Oaia Island: wave refraction, the shore platform, cave–arch–stack, Maori Bay and scales of change, then a short synthesis." }
+  { n: 2, t: "Part 2 · The headland and offshore", short: "Headland", from: 5, to: 9, finale: true, blurb: "Fishermans Rock to Maori Bay, then scales and rates of change: wave refraction, the shore platform, cave–arch–stack, Maori Bay and scales of change, then a short synthesis." }
 ];
 </script>
 <script>const COASTLINE=[[1050,-60],[1110,168],[1110,184],[1150,232],[1150,256],[1162,272],[1162,304],[1188,338],[1238,380],[1234,416],[1206,440],[1194,488],[1158,516],[1134,568],[1138,624],[1154,680],[1250,868],[1258,900],[1290,948],[1302,984],[1386,1144],[1438,1272],[1470,1320],[1502,1388],[1502,1404],[1522,1432],[1574,1544],[1638,1624],[1714,1764],[1754,1880],[1742,1900],[1738,1992],[1774,2068],[1782,2104],[1810,2316],[1814,2416],[1826,2444],[1838,2516],[1822,2532],[1822,2564],[1804,2586],[1776,2582],[1750,2604],[1726,2648],[1732,2654],[1756,2634],[1766,2644],[1754,2664],[1720,2694],[1684,2706],[1658,2756],[1680,2762],[1692,2754],[1728,2750],[1768,2758],[1778,2768],[1774,2796],[1798,2816],[1798,2832],[1808,2842],[1848,2842],[1856,2834],[1866,2844],[1862,2884],[1902,2968],[1902,3008],[1926,3036],[1946,3088],[1946,3120],[1958,3140],[1978,3228],[1982,3412],[1958,3456],[2000,3502],[2020,3506],[2066,3556],[2086,3608],[2090,3676],[2082,3708],[2118,3748],[2142,3824],[2176,3838],[2188,3854],[2238,3888],[2278,3976],[2294,4072],[2260,4134],[2234,4128],[2242,4148],[2238,4164],[2258,4192],[2258,4208],[2242,4220],[2242,4228],[2276,4258],[2312,4238],[2360,4246],[2376,4238],[2402,4260],[2418,4296],[2410,4344],[2400,4354],[2380,4354],[2362,4364],[2362,4408],[2376,4430],[2380,4500]];
@@ -2128,7 +2130,7 @@ function titleScreen() {
   const resume = load();
   modal(`<div class="sheet title-screen"><div class="title-art"><div class="collage">${["drone_south", "stack_beach", "platform_wide", "dunes_park", "dia_refraction", "sea_cave", "aerial_maukatia", "dune_roots", "oaia_photo"].map(k => `<div style="background-image:url(${IMG[k]})"></div>`).join("")}</div></div>
   <div class="sheet-pad"><div class="eyebrow">NCEA Level 3 Geography · AS 91426</div><div class="big-title">MURIWAI<br>TESTING</div>
-  <p>An inside look at how waves, wind, plants and rock interact at the southern end of Muriwai, from the Ōkiritoto Stream to Otakamiro Point, Motutara Stack, Maori Bay and Oaia Island.</p>
+  <p>An inside look at how waves, wind, plants and rock interact at the southern end of Muriwai, from the Ōkiritoto Stream to Otakamiro Point, Motutara Stack and Maori Bay.</p>
   <div class="chips"><span>2 parts</span><span>10 field stops</span><span>Real coastline</span><span>Refraction lab</span><span>Spatial & temporal</span><span>Scale & rate</span><span>Names & numbers</span></div>
   <div class="field"><label for="tn">Your name (optional)</label><input id="tn" value="${esc(resume ? resume.name : "")}"></div>
   <div class="partpick">${PARTS.map((p, k) => { const d = resume && resume.pdone && resume.pdone[k], live = resume && resume.part === k && resume.phase !== "brief" && resume.phase !== "end" && !d; return `<div class="partcard"><b>${esc(p.t)}</b><span>${esc(p.blurb)}</span><small>${d ? `Done: ${Math.round(resume.ps[k][0] / resume.ps[k][1] * 100)}%` : live ? "In progress" : ""}</small><div class="row">${live ? `<button class="btn" data-cont="${k}">Continue Part ${p.n}</button><button class="btn ghost" data-start="${k}">Restart</button>` : `<button class="btn${k ? " ghost" : ""}" data-start="${k}">${d ? "Redo" : "Start"} Part ${p.n}</button>`}</div></div>`; }).join("")}</div></div></div>`);
